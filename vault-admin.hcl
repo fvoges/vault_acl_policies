@@ -5,7 +5,12 @@ path "sys/health" {
 
 # Manage Audit devices
 path "sys/audit" {
-  capabilities = ["create", "delete", "read", "sudo", "update"]
+  capabilities = ["read", "sudo"]
+}
+
+# Manage Audit devices
+path "sys/audit/*" {
+  capabilities = ["create", "delete", "sudo", "update"]
 }
 
 # Create and manage namespaces
@@ -83,3 +88,7 @@ path "sys/replication/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 
+# Manage Raft
+path "sys/storage/raft/*" {
+  capabilities = ["create", "delete", "list", "read", "update"]
+}
