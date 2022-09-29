@@ -3,6 +3,11 @@ path "sys/health" {
   capabilities = ["read", "sudo"]
 }
 
+# Manage Audit devices
+path "sys/audit" {
+  capabilities = ["create", "delete", "read", "sudo", "update"]
+}
+
 # Create and manage namespaces
 path "sys/namespaces" {
   capabilities = ["create", "read", "update", "delete", "list"]
