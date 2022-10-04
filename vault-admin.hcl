@@ -90,5 +90,5 @@ path "sys/replication/*" {
 
 # Manage Raft
 path "sys/storage/raft/*" {
-  capabilities = ["create", "delete", "list", "read", "update"]
+  capabilities = ["create", "delete", "list", "read", "update", "sudo"]
 }
