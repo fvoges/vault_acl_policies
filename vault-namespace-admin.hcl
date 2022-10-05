@@ -78,20 +78,20 @@ path "app1/sys/mounts/*" {
   capabilities = ["create", "delete", "read", "update"]
 }
 
-# Configure AWS secrets engine
-path "app1/aws/config/*" {
-  capabilities = ["create", "delete", "read", "update"]
-}
+# # Configure AWS secrets engine
+# path "app1/aws/config/*" {
+#   capabilities = ["create", "delete", "read", "update"]
+# }
 
-# List AWS secrets engine roles
-path "app1/aws/roles" {
-  capabilities = ["list", "read"]
-}
+# # List AWS secrets engine roles
+# path "app1/aws/roles" {
+#   capabilities = ["list", "read"]
+# }
 
-# Configure AWS secrets engine roles
-path "app1/aws/roles/*" {
-  capabilities = ["create", "delete", "list", "read", "update"]
-}
+# # Configure AWS secrets engine roles
+# path "app1/aws/roles/*" {
+#   capabilities = ["create", "delete", "list", "read", "update"]
+# }
 
 # Admins should not really need these
 ## Generate AWS credentials
@@ -113,9 +113,19 @@ path "app1/kubernetes/roles" {
   capabilities = ["list", "read"]
 }
 
-
 # Configure Kubernetes secrets engine roles
 path "app1/kubernetes/roles/*" {
   capabilities = ["create", "delete", "list", "read", "update"]
 }
 
+path "app1/auth/kubernetes/*" {
+  capabilities = ["create", "delete", "list", "read", "update"]
+}
+
+path "app1/auth/jwt/*" {
+  capabilities = ["create", "delete", "list", "read", "update"]
+}
+
+path "app1/kv/*" {
+  capabilities = ["create", "delete", "list", "patch", "read", "update"]
+}
