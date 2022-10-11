@@ -118,6 +118,11 @@ path "app1/kubernetes/roles/*" {
   capabilities = ["create", "delete", "list", "read", "update"]
 }
 
+# Generate Kubernetes secrets engine credentials
+# path "app1/kubernetes/creds/*" {
+#   capabilities = ["create", "update"]
+# }
+
 path "app1/auth/kubernetes/*" {
   capabilities = ["create", "delete", "list", "read", "update"]
 }
