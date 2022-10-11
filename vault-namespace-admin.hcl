@@ -104,7 +104,7 @@ path "app1/sys/mounts/*" {
 #}
 
 # Configure Kubernetes secrets engine
-path "app1/kubernetes/config/*" {
+path "app1/kubernetes/config" {
   capabilities = ["create", "delete", "read", "update"]
 }
 
