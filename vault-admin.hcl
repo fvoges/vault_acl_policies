@@ -92,3 +92,19 @@ path "sys/replication/*" {
 path "sys/storage/raft/*" {
   capabilities = ["create", "delete", "list", "read", "update", "sudo"]
 }
+
+# Encryption Key Rotation
+path "sys/rotate" {
+  capabilities = ["create", "update", "sudo"]
+}
+
+# Automated Encryption Key Rotation Configuration
+path "sys/rotate/config" {
+  capabilities = ["create", "read", "update"]
+}
+
+# Get Encryption Key Status
+path "sys/key-status" {
+  capabilities = ["read"]
+}
+
