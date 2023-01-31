@@ -8,9 +8,10 @@ path "acme/auth/token/lookup-self" {
 path "acme/sys/capabilities-self" {
     capabilities = ["update"]
 }
+
 # Create and manage namespaces
 path "acme/sys/namespaces" {
-  capabilities = ["create", "read", "update", "delete", "list"]
+  capabilities = ["list"]
 }
 
 # Create and manage namespaces
@@ -73,14 +74,14 @@ path "acme/sys/mounts" {
   capabilities = ["read"]
 }
 
-path "acme/auth/kubernetes/*" {
-  capabilities = ["create", "delete", "list", "read", "update"]
-}
+// path "acme/auth/kubernetes/*" {
+//   capabilities = ["create", "delete", "list", "read", "update"]
+// }
 
-path "acme/auth/ldap/*" {
-  capabilities = ["create", "delete", "list", "read", "update"]
-}
+// path "acme/auth/ldap/*" {
+//   capabilities = ["create", "delete", "list", "read", "update"]
+// }
 
-path "acme/auth/jwt/*" {
-  capabilities = ["create", "delete", "list", "read", "update"]
-}
+// path "acme/auth/jwt/*" {
+//   capabilities = ["create", "delete", "list", "read", "update"]
+// }
