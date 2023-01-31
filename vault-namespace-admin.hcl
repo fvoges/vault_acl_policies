@@ -10,7 +10,7 @@ path "acme/app1/sys/capabilities-self" {
 }
 # Create and manage namespaces
 path "acme/app1/sys/namespaces" {
-  capabilities = ["create", "read", "update", "delete", "list"]
+  capabilities = ["list"]
 }
 
 # Create and manage namespaces
